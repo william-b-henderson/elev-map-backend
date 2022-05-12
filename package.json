@@ -1,0 +1,15 @@
+{
+  "name": "elevmap-backend",
+  "version": "1.0.0",
+  "description": "Backend for elevation map application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "William Henderson",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "neo4j-driver": "^4.4.5"
+  }
+}

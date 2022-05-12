@@ -1,0 +1,231 @@
+{
+  "version": "0.1.2-beta.2",
+  "graph": {
+    "nodes": [
+      {
+        "id": "n0",
+        "position": {
+          "x": -160,
+          "y": -120.5
+        },
+        "caption": "Coordinate"
+      },
+      {
+        "id": "n1",
+        "position": {
+          "x": 100,
+          "y": -120.5
+        },
+        "caption": "Coordinate"
+      }
+    ],
+    "relationships": [
+      {
+        "id": "n0",
+        "type": "CONNECTED_TO",
+        "fromId": "n0",
+        "toId": "n1"
+      },
+      {
+        "id": "n1",
+        "type": "CONNECTED_TO",
+        "fromId": "n1",
+        "toId": "n0"
+      }
+    ]
+  },
+  "dataModel": {
+    "fileModel": {
+      "fileSchemas": {
+        "intersections.csv": {
+          "expanded": true,
+          "fields": [
+            {
+              "name": "id",
+              "type": "string",
+              "sample": "37.8688204-122.2589601",
+              "include": true
+            },
+            {
+              "name": "lat",
+              "type": "string",
+              "sample": "37.8688204",
+              "include": true
+            },
+            {
+              "name": "lon",
+              "type": "string",
+              "sample": "-122.2589601",
+              "include": true
+            },
+            {
+              "name": "connected_to",
+              "type": "string",
+              "sample": "37.8688478-122.2588819",
+              "include": true
+            }
+          ]
+        }
+      }
+    },
+    "graphModel": {
+      "nodeSchemas": {
+        "n0": {
+          "label": "Coordinate",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "id",
+              "type": "string",
+              "identifier": "1d656812-e413-4b74-a6d3-aa31b4ed13cf"
+            },
+            {
+              "property": "lat",
+              "type": "string",
+              "identifier": "2897b937-f994-46be-a77d-8e3e8f97c2e4"
+            },
+            {
+              "property": "lon",
+              "type": "string",
+              "identifier": "30381b20-512e-4006-95e3-ac9c8a604eea"
+            },
+            {
+              "property": "connected_to",
+              "type": "string",
+              "identifier": "d1a60c41-fe39-4c50-832c-3a0f268d608a"
+            }
+          ],
+          "key": {
+            "properties": [
+              "1d656812-e413-4b74-a6d3-aa31b4ed13cf"
+            ],
+            "name": ""
+          }
+        },
+        "n1": {
+          "label": "Coordinate",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "id",
+              "type": "string",
+              "identifier": "ffd89fc7-c3c8-40ba-aac5-0e833e3934e1"
+            },
+            {
+              "property": "lat",
+              "type": "string",
+              "identifier": "c8de4279-57b9-4167-96b8-e4231e68aea1"
+            },
+            {
+              "property": "lon",
+              "type": "string",
+              "identifier": "19bdb7bd-e859-4c77-8327-4a85a0ff3fe1"
+            },
+            {
+              "property": "connected_to",
+              "type": "string",
+              "identifier": "eea3ef27-b24d-453c-bb2d-af2c3331339f"
+            }
+          ],
+          "key": {
+            "properties": [
+              "ffd89fc7-c3c8-40ba-aac5-0e833e3934e1"
+            ],
+            "name": ""
+          }
+        }
+      },
+      "relationshipSchemas": {
+        "n0": {
+          "type": "CONNECTED_TO",
+          "sourceNodeSchema": "n0",
+          "targetNodeSchema": "n1",
+          "properties": []
+        },
+        "n1": {
+          "type": "CONNECTED_TO",
+          "sourceNodeSchema": "n1",
+          "targetNodeSchema": "n0",
+          "properties": []
+        }
+      }
+    },
+    "mappingModel": {
+      "nodeMappings": {
+        "n0": {
+          "nodeSchema": "n0",
+          "fileSchema": "intersections.csv",
+          "mappings": [
+            {
+              "field": "id"
+            },
+            {
+              "field": "lat"
+            },
+            {
+              "field": "lon"
+            },
+            {
+              "field": "connected_to"
+            }
+          ]
+        },
+        "n1": {
+          "nodeSchema": "n1",
+          "fileSchema": "intersections.csv",
+          "mappings": [
+            {
+              "field": "id"
+            },
+            {
+              "field": "lat"
+            },
+            {
+              "field": "lon"
+            },
+            {
+              "field": "connected_to"
+            }
+          ]
+        }
+      },
+      "relationshipMappings": {
+        "n0": {
+          "relationshipSchema": "n0",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "connected_to"
+            }
+          ],
+          "fileSchema": "intersections.csv"
+        },
+        "n1": {
+          "relationshipSchema": "n1",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "connected_to"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "id"
+            }
+          ],
+          "fileSchema": "intersections.csv"
+        }
+      }
+    },
+    "configurations": {
+      "idsToIgnore": []
+    }
+  }
+}
