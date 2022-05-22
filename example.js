@@ -9,7 +9,7 @@
     const driver = neo4j.driver(uri, neo4j.auth.basic(user, password))
     const session = driver.session()
    
-    const csv_path = 'https://drive.google.com/file/d/13hIPkizpVsHLlLeI60DTxWWZmp0OBKua/view?usp=sharing'
+    const csv_path = 'https://github.com/william-b-henderson/elev-map-backend/blob/main/intersections.csv'
    
     try {
       // To learn more about the Cypher syntax, see https://neo4j.com/docs/cypher-manual/current/

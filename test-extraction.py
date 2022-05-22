@@ -26,7 +26,7 @@ for feature in data["features"]:
         row = pd.DataFrame.from_dict({'id': [id], 'lat': [lat], 'lon': [lon], 'connected_to': [connected_to]})
         df = pd.concat([df, row], ignore_index=True)
         ctr += 1
-    break
+    # break
 df.to_csv('intersections.csv', index=False)
 print(df)
 # print(types)
